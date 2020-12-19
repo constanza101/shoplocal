@@ -3,7 +3,7 @@
     <home-app-bar />
     <home-view />
     <home-footer />
-    <home-settings />
+    <!-- <home-settings /> -->
   </v-app>
 </template>
 

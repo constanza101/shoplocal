@@ -13,7 +13,7 @@
           max-width="700"
           width="100%"
         >
-        <v-col style="background-color: #f8cc2b; width: 240px;  border-radius:150px; margin-left:80px; margin-bottom:50px" class="py-10 px-9">
+        <v-col style="background-color: primary; width: 240px;  border-radius:150px; margin-left:80px; margin-bottom:50px" class="py-10 px-9">
           <base-img
             style="margin-left: -170px"
             :src="require('@/assets/castelldefels.png')"
@@ -43,8 +43,8 @@
             "
             class="d-flex flex-wrap"
           >
-            <v-btn width="200px" light color="#f8cc2b" class="mr-8 my-3" > Buscar tienda </v-btn>
-            <v-btn  width="200px" text color="#f8cc2b" :ripple="false" > tengo una tienda </v-btn>
+            <v-btn width="200px" light color="primary" class="mr-8 my-3" > Buscar tienda </v-btn>
+            <v-btn  width="200px" text color="primary" :ripple="false" > tengo una tienda </v-btn>
 
           </div>
         </v-responsive>

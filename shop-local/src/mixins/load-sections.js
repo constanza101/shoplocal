@@ -13,7 +13,7 @@ export default function (sections = []) {
     // Promise.
     components: sections.reduce((acc, cur) => {
       const name = upperFirst(camelCase(cur))
-
+console.log(acc)
       acc[`Section${name}`] = () => import(`@/views/sections/${name}.vue`)
 
       return acc

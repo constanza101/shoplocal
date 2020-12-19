@@ -7,8 +7,8 @@
       elevation="1"
       height="80"
     >
-   <v-btn fab  text  style="background-color: primary">
-<v-icon x-large color="#fff">mdi-storefront-outline</v-icon>
+   <v-btn text fab style="background-color: black">
+<v-icon large color="primary">mdi-storefront-outline</v-icon>
    </v-btn>
 
       <v-spacer />
@@ -58,6 +58,7 @@
     data: () => ({
       drawer: null,
       items: [
+        'Map',
         'Home',
         'About',
         'Contact',
