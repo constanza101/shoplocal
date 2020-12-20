@@ -25,7 +25,7 @@ const router = new Router({
         },
         {
           path: 'map',
-          name: 'Map',
+          name: 'Mapa',
           component: () => import('@/views/map/Index.vue'),
           meta: { src: require('@/assets/about.jpg') },
         },        {

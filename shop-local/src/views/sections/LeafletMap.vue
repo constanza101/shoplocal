@@ -18,17 +18,61 @@
         :options-style="styleFunction"
       />
       <l-marker
+      v-if="creatingNewshop"
         :draggable="true"
         :lat-lng="marker"
         @update:lat-lng="updatePosition"
       />
+
+    <div v-if="shops.length > 0 ">
+        <l-marker
+          v-for="(shop, index) in shops"
+          :lat-lng="shop.position"
+          :key="index"
+          :draggable="true"
+          :title="shop.name"
+          @click="editMarker(shop)"
+        >
+          <l-icon>
+            <div class="background-icon">
+              <v-icon>{{shop.icon}}</v-icon>
+              
+            </div>
+          </l-icon>
+          <l-popup >
+            <v-row>
+            <v-col class=" d-flex justify-center pt-1"  cols="12" style="font-size:18px;"> <b>{{shop.name}}</b> </v-col>
+            </v-row>
+          
+            <p v-if="shop.address">{{shop.address}}</p>
+            <v-col class="pa-0 d-flex justify-center">
+              <v-btn icon v-if="shop.website"> <v-icon small>mdi-web</v-icon> </v-btn>
+              <v-btn icon v-if="shop.instagram"> <v-icon small>mdi-instagram</v-icon> </v-btn>
+              <v-btn icon v-if="shop.facebook"> <v-icon small>mdi-facebook</v-icon> </v-btn>
+            </v-col>
+          
+          </l-popup>
+        </l-marker>
+      </div>
+
     </l-map>
   </base-section>
 </template>
 
 <script>
 import { latLng } from "leaflet";
-import { LMap, LTileLayer, LMarker, LGeoJson } from "vue2-leaflet";
+import {
+  LMap,
+  LTileLayer,
+  // LImageOverlay,
+  LMarker,
+  LPopup,
+  LIcon,
+  // LTooltip,
+  // LControl,
+  LGeoJson
+} from "vue2-leaflet";
+
 
 export default {
   name: "Example",
@@ -37,9 +81,15 @@ export default {
     LTileLayer,
     LGeoJson,
     LMarker,
+    // LImageOverlay,
+    LPopup,
+    LIcon,
+    // LTooltip,
+    // LControl,
   },
   data() {
     return {
+      creatingNewshop: false,
       loading: false,
       show: true,
       enableTooltip: true,
@@ -51,6 +101,13 @@ export default {
       attribution:
         '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
       marker: latLng(41.279313, 1.974593),
+
+      shops: [
+        {id: 1, name: "Mercería B.E.A", icon: "mdi-shoe-heel", position: latLng(41.2790192,1.974814,17), instagram: "https://www.instagram.com/merceriabea/", website:"https://www.merceriabea.com/", tags: ["mercería", "costurera", "compostura", "lana", "mascarillas", "arreglos"]},
+        {id: 2, name: "Intez Inmuebles", instagram: "https://www.instagram.com/intezinmuebles/",  icon:"mdi-office-building", website:"https://www.intez.es/", facebook:"https://www.facebook.com/intezinmuebles", position: latLng(41.2687408,1.9863705), tags: ["inmuebles", "compra", "venta", "inmobiliaria", "apartamentos", "alquiler"]},
+        {id: 3, name: "Gominoles", icon: "mdi-muffin", instagram:"https://www.instagram.com/gominoles.castelldefels/", facebook:"https://www.facebook.com/gominoles.castelldefels/", position: latLng(41.2826747,1.9798195),  tags: ["gominoles", "dulces", "golosinas", "cumpleaños"]},
+      ],
+      icons: ['mdi-shopping-outline', "mdi-food-fork-drink",]
     };
   },
   computed: {
@@ -91,6 +148,9 @@ export default {
     updatePosition(position) {
       this.marker = position;
     },
+    editMarker(shop){
+      console.log(shop)
+    }
   },
   async created() {
     this.loading = true;
@@ -103,3 +163,22 @@ export default {
   },
 };
 </script>
+<style scoped lang="css">
+  .background-icon {
+  margin-top: -27px;
+  margin-left: -10px;
+  width: 35px;
+  height: 35px;
+  background-color: white;
+  border-radius: 50%;
+  padding: 5px;
+  box-shadow: 1px 1px 5px grey;
+}
+a {
+  color: black 
+}
+>>> .leaflet-popup{
+  margin-bottom: 40px;
+
+}
+</style>

@@ -58,8 +58,8 @@
     data: () => ({
       drawer: null,
       items: [
-        'Map',
         'Home',
+        'Mapa',
         'About',
         'Contact',
         'Pro',
