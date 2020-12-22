@@ -15,8 +15,8 @@
     mixins: [
       LoadSections([
         '404',
-        'newsletter',
-        'info-alt',
+        // 'newsletter',
+        // 'info-alt',
       ]),
     ],
 

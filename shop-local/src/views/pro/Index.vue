@@ -14,8 +14,8 @@
 
     mixins: [
       LoadSections([
-        'hero-alt',
-        'pro-features',
+        // 'hero-alt',
+        // 'pro-features',
       ]),
     ],
 

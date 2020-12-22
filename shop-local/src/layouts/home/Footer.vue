@@ -14,10 +14,11 @@
           <div class="d-flex flex-wrap justify-md-start justify-center justify-md-none">
             <template v-for="(s, i) in social">
               <a
-                :key="s"
+                target="_blank"
+                :key="s.name"
                 class="white--text pa-1 pa-md-0"
-                href="#"
-                v-text="s"
+                :href="s.link"
+                v-text="s.name"
               />
 
               <v-responsive
@@ -37,7 +38,7 @@
           cols="12"
           md="6"
         >
-          Copyright &copy; 2020 Vuetify, LLC
+          Made by  &copy; Constanza Díaz
         </v-col>
       </v-row>
     </v-container>
@@ -50,10 +51,10 @@
 
     data: () => ({
       social: [
-        'Facebook',
-        'Twitter',
-        'Instagram',
-        'Linkedin',
+        {name: 'Facebook', link: 'https://www.facebook.com/castelldefelstiendasdebarrio/'},
+        {name: 'Twitter', link: 'https://twitter.com/ajcastelldefels'},
+        {name: 'Instagram', link: 'https://www.instagram.com/castelldefelstiendasdebarrio/'},
+        {name: 'Linkedin', link: 'https://www.linkedin.com/in/constanzadi'}
       ],
     }),
   }

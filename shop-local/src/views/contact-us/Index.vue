@@ -14,11 +14,11 @@
 
     mixins: [
       LoadSections([
-        'hero-alt',
-        'keep-in-touch',
-        'map',
-        'newsletter',
-        'pro-features',
+        // 'hero-alt',
+        // 'keep-in-touch',
+        // 'map',
+        // 'newsletter',
+        // 'pro-features',
       ]),
     ],
 

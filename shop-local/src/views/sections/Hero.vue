@@ -1,5 +1,5 @@
 <template>
-  <section id="hero">
+  <section id="hero" style="max-height: calc(100vh - 150px); overflow: hidden">
     <v-img
       :min-height="minHeight"
       src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Castell_de_Fels%2C_Esgl%C3%A9sia_de_Santa_Maria_i_Torre_de_guaita_%28Castelldefels%29_-_1.jpg"
@@ -8,7 +8,7 @@
     >
       <v-container class="fill-height px-4 py-12 " >
         <v-responsive
-          class="d-flex align-center"
+          class="d-flex align-start"
           height="100%"
           max-width="700"
           width="100%"

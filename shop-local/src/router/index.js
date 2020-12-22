@@ -28,7 +28,20 @@ const router = new Router({
           name: 'Mapa',
           component: () => import('@/views/map/Index.vue'),
           meta: { src: require('@/assets/about.jpg') },
-        },        {
+        }, 
+        {
+          path: 'proyecto',
+          name: 'Proyecto',
+          component: () => import('@/views/about/Index.vue'),
+          meta: { src: require('@/assets/about.jpg') },
+        },
+        {
+          path: 'contacto',
+          name: 'Contacto',
+          component: () => import('@/views/contact-us/Index.vue'),
+          meta: { src: require('@/assets/contact.jpg') },
+        }, 
+        {
           path: 'about',
           name: 'About',
           component: () => import('@/views/about/Index.vue'),

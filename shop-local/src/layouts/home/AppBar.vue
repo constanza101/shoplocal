@@ -6,6 +6,7 @@
       color="white"
       elevation="1"
       height="80"
+      style="z-index: 500"
     >
    <v-btn text fab style="background-color: black">
 <v-icon large color="primary">mdi-storefront-outline</v-icon>
@@ -41,6 +42,7 @@
     </v-app-bar>
 
     <home-drawer
+    style="z-index: 500"
       v-model="drawer"
       :items="items"
     />
@@ -60,9 +62,8 @@
       items: [
         'Home',
         'Mapa',
-        'About',
-        'Contact',
-        'Pro',
+        'Proyecto',
+        'Contacto',
       ],
     }),
   }
