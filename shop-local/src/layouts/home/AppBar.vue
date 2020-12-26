@@ -62,7 +62,7 @@
       items: [
         'Home',
         'Mapa',
-        'Proyecto',
+        'Conocenos',
         'Contacto',
       ],
     }),

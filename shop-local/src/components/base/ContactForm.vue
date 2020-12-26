@@ -7,24 +7,24 @@
       color="primary"
     />
 
-    <base-text-field label="Name" />
+    <base-text-field label="Nombre o tienda" />
 
     <base-text-field label="Email" />
 
-    <base-text-field label="Subject" />
+    <base-text-field label="Asunto" />
 
     <base-textarea
       class="mb-6"
-      label="Your Need & Description"
+      label="Mensaje"
     />
 
     <base-btn
       :color="!theme.isDark ? 'accent' : 'white'"
-      href="mailto:shop@vuetifyjs.com?subject=Zero%20Theme%20Question"
+      href="mailto:constanza.diaz@gmail.com?subject=Castelldefels%20Tiendas%20de%20Barrio"
       outlined
       target="_blank"
     >
-      Send message
+      Enviar
     </base-btn>
   </div>
 </template>

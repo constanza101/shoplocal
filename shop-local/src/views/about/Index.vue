@@ -8,14 +8,14 @@
   export default {
     name: 'About',
 
-    metaInfo: { title: 'About Us' },
+    metaInfo: { title: 'Quienes somos ' },
 
     extends: View,
 
     mixins: [
       LoadSections([
-        // 'hero-alt',
-        // 'about-our-product',
+        'hero-alt',
+        'about-our-product',
         // 'theme-features',
         // 'affiliates',
         // 'newsletter',

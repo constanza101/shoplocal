@@ -27,7 +27,7 @@
             <base-btn
               :block="$vuetify.breakpoint.smAndDown"
               color="white"
-              href="mailto:shop@vuetifyjs.com?subject=Zero%20Theme%20Question"
+              href="mailto:constanza.diaz@gmail.com?subject=Castelldefels%20Tiendas%20de%20Barrio"
               large
               outlined
               target="_blank"

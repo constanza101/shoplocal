@@ -2,10 +2,10 @@
   <v-theme-provider :dark="dark">
     <div>
       <base-info-card
-        title="contáctanos."
+        title="contáctanos"
         pace="6"
       >
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo pariatur quidem, quis modi iure nihil commodi suscipit, corporis dicta adipisci, voluptatum quia cupiditate. Nulla minus voluptatum nostrum deleniti, asperiores facere.
+      Si quieres ser parte de esta comunidad envía tus datos y los de tu tienda a nuestro  e-mail.
       </base-info-card>
 
       <base-business-contact dense />
@@ -23,18 +23,18 @@
       business: [
         {
           icon: 'mdi-map-marker-outline',
-          title: 'Address',
-          text: '8553 N. Beach St. Ste. 227<br>Fort Worth, Texas 76137',
+          title: 'Ubicación',
+          text: 'Castelldefels (08860)',
         },
         {
           icon: 'mdi-cellphone',
-          title: 'Phone',
-          text: '01 (800) 433 744<br>01 (800) 433 633',
+          title: 'Teléfono',
+          text: '+34 640286830',
         },
         {
           icon: 'mdi-email',
           title: 'Email',
-          text: 'john@vuetifyjs.com<br>heather@vuetifyjs.com',
+          text: 'constanza.diaz@gmail.com',
         },
       ],
     }),

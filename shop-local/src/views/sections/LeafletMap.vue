@@ -48,7 +48,6 @@
               <v-row>
               <v-col class=" d-flex justify-center pt-1"  cols="12" style="font-size:18px;"> <b>{{shop.name}}</b> </v-col>
               </v-row>
-            
               <p v-if="shop.address">{{shop.address}}</p>
               <v-col class="pa-0 d-flex justify-center">
                 <v-btn @click="openLink(shop.website)" icon v-if="shop.website"> <v-icon small>mdi-web</v-icon> </v-btn>
@@ -64,18 +63,19 @@
 
     </v-col>
     <v-col cols="12" md="6" lg="4" >
+      <b>Filtro</b>
 
     <v-text-field
         v-model="search"
         append-icon="mdi-magnify"
         label="Busca un rubro o nombre de tienda"
-        single-line
         hide-details
+        outlined
         
       ></v-text-field>
 
       <v-data-table
-      class="pt-12"
+        class="pt-3"
         height="calc(100vh - 350px)"
         :headers="headers"
         :items="shops"
@@ -112,7 +112,7 @@ import {
 
 
 export default {
-  name: "Example",
+  name: "LeafletMap",
   components: {
     LMap,
     LTileLayer,
@@ -141,7 +141,6 @@ export default {
       attribution:
         '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
       marker: latLng(41.279313, 1.974593),
-      icons: ['mdi-shopping-outline', "mdi-food-fork-drink",]
     };
   },
   computed: {
@@ -169,12 +168,12 @@ export default {
     },
     shops(){
       let shops =  [
-        {id: 1, name: "Mercería B.E.A", icon: "mdi-shoe-heel", position: latLng(41.2790192,1.974814,17), instagram: "https://www.instagram.com/merceriabea/", website:"https://www.merceriabea.com/", tags: ["mercería", "costurera", "compostura", "lana", "mascarillas", "arreglos"]},
-        {id: 2, name: "Intez Inmuebles", instagram: "https://www.instagram.com/intezinmuebles/",  icon:"mdi-office-building", website:"https://www.intez.es/", facebook:"https://www.facebook.com/intezinmuebles", position: latLng(41.2687408,1.9863705), tags: [" inmuebles", " compra", " venta", " inmobiliaria", " apartamentos", " alquiler"]},
-        {id: 3, name: "Gominoles", icon: "mdi-muffin", instagram:"https://www.instagram.com/gominoles.castelldefels/", facebook:"https://www.facebook.com/gominoles.castelldefels/", position: latLng(41.2826747,1.9798195),  tags: [" gominoles", " dulces", " golosinas", " cumpleaños", " niños"]},
-        {id: 4, name: "La casa de la iaia", icon: "mdi-baby-face-outline", instagram:"https://www.instagram.com/lacasadelaiaiacastelldefels/", facebook:"https://www.facebook.com/ludotecacastelldefels/", position: latLng(41.2836019,1.9790619),  tags: [" ludoteca", " guardería", " fiestas infantiles", " cumpleaños", " niños"]},
-        {id: 5, name: "Naturbella", icon: "mdi-face-woman-outline", instagram:"https://www.instagram.com/naturbellacastelldefels/", facebook:"https://www.facebook.com/naturbellacastelldefels/", position: latLng(41.2831487,1.9788344), website:"https://centre-estetica-naturbella-castelldefels.negocio.site/", tags: [" estética", " centro de estética", " peluquería", " manicura", " esmalte", " semipermanente"]},
-        {id: 6, name: "Delma Nails", icon: "mdi-face-woman-outline", instagram:"https://www.instagram.com/delmaelisa_nails/",  position: latLng(41.2668608,1.9789211), website:"https://delma-nails.negocio.site/", tags: [" estética", " centro de estética", " manicura", " esmalte", " semipermanente"]},
+        {id: 1, name: "Mercería B.E.A", icon: "mdi-shoe-heel", position: latLng(41.2788893,1.9764628,21), instagram: "https://www.instagram.com/merceriabea/", website:"https://www.merceriabea.com/", tags: ["mercería", "costurera", "compostura", "lana", "mascarillas", "arreglos"]},
+        {id: 2, name: "Intez Inmuebles", instagram: "https://www.instagram.com/intezinmuebles/",  icon:"mdi-office-building", website:"https://www.intez.es/", facebook:"https://www.facebook.com/intezinmuebles", position: latLng(41.2687707,1.9885141,21), tags: [" inmuebles", " compra", " venta", " inmobiliaria", " apartamentos", " alquiler"]},
+        {id: 3, name: "Gominoles", icon: "mdi-muffin", instagram:"https://www.instagram.com/gominoles.castelldefels/", facebook:"https://www.facebook.com/gominoles.castelldefels/", position: latLng(41.2826808,1.9797894,21),  tags: [" gominoles", " dulces", " golosinas", " cumpleaños", " niños"]},
+        {id: 4, name: "La casa de la iaia", icon: "mdi-baby-face-outline", instagram:"https://www.instagram.com/lacasadelaiaiacastelldefels/", facebook:"https://www.facebook.com/ludotecacastelldefels/", position: latLng(41.2836123,1.9811225,21),  tags: [" ludoteca", " guardería", " fiestas infantiles", " cumpleaños", " niños"]},
+        {id: 5, name: "Naturbella", icon: "mdi-face-woman-outline", instagram:"https://www.instagram.com/naturbellacastelldefels/", facebook:"https://www.facebook.com/naturbellacastelldefels/", position: latLng(41.2831536,1.9809661,21), website:"https://centre-estetica-naturbella-castelldefels.negocio.site/", tags: [" estética", " centro de estética", " peluquería", " manicura", " esmalte", " semipermanente"]},
+        {id: 6, name: "Delma Nails", icon: "mdi-face-woman-outline", instagram:"https://www.instagram.com/delmaelisa_nails/",  position: latLng(41.266846,1.981148,21), website:"https://delma-nails.negocio.site/", tags: [" estética", " centro de estética", " manicura", " esmalte", " semipermanente"]},
         ]
       return shops
     },

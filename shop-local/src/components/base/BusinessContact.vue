@@ -8,7 +8,7 @@
         <slot />
       </base-info-card>
 
-      <template v-for="({ icon, text, title: t }, i) in business">
+      <template style="height: 500px" v-for="({ icon, text, title: t }, i) in business">
         <base-avatar-card
           :key="i"
           :icon="icon"
@@ -20,13 +20,13 @@
         >
           <!-- Do not use v-html for user -->
           <!-- provided values -->
-          <div v-html="text" />
+          <div class="pt-3" v-html="text" />
         </base-avatar-card>
 
         <v-divider
           v-if="i + 1 !== business.length"
           :key="`divider-${i}`"
-          class="my-2"
+          class="my-0"
         />
       </template>
     </div>
@@ -44,21 +44,21 @@
     },
 
     data: () => ({
-      business: [
+           business: [
         {
           icon: 'mdi-map-marker-outline',
-          title: 'Address',
-          text: '8553 N. Beach St. Ste. 227<br>Fort Worth, Texas 76137',
+          title: 'Ubicación',
+          text: 'Castelldefels (08860)',
         },
         {
           icon: 'mdi-cellphone',
-          title: 'Phone',
-          text: '01 (800) 433 744<br>01 (800) 433 633',
+          title: 'Teléfono',
+          text: '+34 640286830',
         },
         {
           icon: 'mdi-email',
           title: 'Email',
-          text: 'john@vuetifyjs.com<br>heather@vuetifyjs.com',
+          text: 'constanza.diaz@gmail.com',
         },
       ],
     }),
